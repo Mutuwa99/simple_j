@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SSH_CREDENTIALS_ID = 'mysite' // Replace with your actual SSH credentials ID
-        SERVER_IP = '18.234.232.240'
+        SERVER_IP = 'ec2-18-234-232-240.compute-1.amazonaws.com'
         REMOTE_USER = 'ubuntu' // Change this to the appropriate non-root user
         GITHUB_REPO_URL = 'https://github.com/Mutuwa99/simple_j.git'
     }
