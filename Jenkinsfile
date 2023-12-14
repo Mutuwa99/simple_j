@@ -42,7 +42,7 @@ pipeline {
                     // Ensure remote directory exists
                     sh "ssh -i \$SSH_KEY ${REMOTE_USER}@${SERVER_IP} 'mkdir -p /var/www/html/'"
 
-                    // Deploy the code to the server using scp
+                    // Deploy the code tohhhh the server using scp
                     withCredentials([file(credentialsId: SSH_CREDENTIALS_ID, variable: 'SSH_KEY')]) {
                         try {
                             sh "scp -i \$SSH_KEY -o StrictHostKeyChecking=no -r ./ ${REMOTE_USER}@${SERVER_IP}:/var/www/html/"
