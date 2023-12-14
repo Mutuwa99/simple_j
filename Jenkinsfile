@@ -40,7 +40,7 @@ pipeline {
             steps {
                 script {
                     // Ensure remote directory exists
-                    sh "ssh -i \$SSH_KEY ${REMOTE_USER}@${SERVER_IP} 'mkdir -p /var/www/html/'"
+                   // sh "ssh -i \$SSH_KEY ${REMOTE_USER}@${SERVER_IP} 'mkdir -p /var/www/html/'"
 
                     // Deploy the code tohhhh the server using scp
                     withCredentials([file(credentialsId: SSH_CREDENTIALS_ID, variable: 'SSH_KEY')]) {
